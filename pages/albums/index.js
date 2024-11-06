@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 function Albums({ data }) {
   return (
     <div>
@@ -5,7 +7,9 @@ function Albums({ data }) {
       <ul>
         {data.map((item) => (
           <li key={item.id}>
-            <p>{item.title}</p>
+            <Link href={`albums/${item.id}`}>
+              <p>{item.title}</p>
+            </Link>
           </li>
         ))}
       </ul>
