@@ -1,4 +1,3 @@
-import { notFound } from "next/navigation";
 import React from "react";
 
 function AlbumDetails({ album }) {
@@ -27,7 +26,7 @@ export async function getServerSideProps(context) {
   if (!data.title) {
     return {
       redirect: { destination: "/albums" },
-      //   notFound:true
+    //   notFound: true,
     };
   }
 
